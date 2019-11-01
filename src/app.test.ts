@@ -111,3 +111,20 @@ it("should not let a player play over another player", () => {
   expect(game.board[0]).toBe("O");
   expect(game.currentPlayer).toBe("X");
 });
+
+it("should not play on a won game", () => {
+  const game = new TicTacToe();
+  const board = ["", "O", "", "", "O", "", "", "O", ""];
+  game.board = board;
+  game.play(0);
+  expect(game.currentPlayer).toBe("X");
+});
+
+it("should set winner when playing the winning move", () => {
+  const game = new TicTacToe();
+  const board = ["", "O", "", "", "O", "", "", "", ""];
+  game.board = board;
+  game.currentPlayer = "O";
+  game.play(7);
+  expect(game.winner).toBe("O");
+});
