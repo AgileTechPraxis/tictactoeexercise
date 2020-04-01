@@ -27,80 +27,70 @@ it("should recognise player X winning on the top row", () => {
   const game = new TicTacToe();
   const board = ["X", "X", "X", "", "", "", "", "", ""];
   game.board = board;
-  win(game);
-  expect(game.winner).toBe("X");
+  expect(win(game)).toBe("X");
 });
 
 it("should recognise player O winning on the top row", () => {
   const game = new TicTacToe();
   const board = ["O", "O", "O", "", "", "", "", "", ""];
   game.board = board;
-  win(game);
-  expect(game.winner).toBe("O");
+  expect(win(game)).toBe("O");
 });
 
 it("should recognise player O winning on the middle row", () => {
   const game = new TicTacToe();
   const board = ["", "", "", "O", "O", "O", "", "", ""];
   game.board = board;
-  win(game);
-  expect(game.winner).toBe("O");
+  expect(win(game)).toBe("O");
 });
 
 it("should recognise player O winning on the bottom row", () => {
   const game = new TicTacToe();
   const board = ["", "", "", "", "", "", "O", "O", "O"];
   game.board = board;
-  win(game);
-  expect(game.winner).toBe("O");
+  expect(win(game)).toBe("O");
 });
 
 it("should recognise player X winning on the first column", () => {
   const game = new TicTacToe();
   const board = ["X", "", "", "X", "", "", "X", "", ""];
   game.board = board;
-  win(game);
-  expect(game.winner).toBe("X");
+  expect(win(game)).toBe("X");
 });
 
 it("should recognise player O winning on the middle column", () => {
   const game = new TicTacToe();
   const board = ["", "O", "", "", "O", "", "", "O", ""];
   game.board = board;
-  win(game);
-  expect(game.winner).toBe("O");
+  expect(win(game)).toBe("O");
 });
 
 it("should recognise player O winning on the last column", () => {
   const game = new TicTacToe();
   const board = ["", "", "O", "", "", "O", "", "", "O"];
   game.board = board;
-  win(game);
-  expect(game.winner).toBe("O");
+  expect(win(game)).toBe("O");
 });
 
 it("should recognise player X winning on the up-diagonal", () => {
   const game = new TicTacToe();
   const board = ["", "", "X", "", "X", "", "X", "", ""];
   game.board = board;
-  win(game);
-  expect(game.winner).toBe("X");
+  expect(win(game)).toBe("X");
 });
 
 it("should recognise player O winning on the up-diagonal", () => {
   const game = new TicTacToe();
   const board = ["O", "", "", "", "O", "", "", "", "O"];
   game.board = board;
-  win(game);
-  expect(game.winner).toBe("O");
+  expect(win(game)).toBe("O");
 });
 
 it("should recognise a tie", () => {
   const game = new TicTacToe();
   const board = ["O", "X", "O", "O", "X", "X", "X", "O", "O"];
   game.board = board;
-  win(game);
-  expect(game.winner).toBe("TIE");
+  expect(win(game)).toBe("TIE");
 });
 
 it("should not let a player play over another player", () => {

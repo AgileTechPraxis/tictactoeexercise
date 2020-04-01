@@ -1,44 +1,46 @@
 import { win } from "./win";
 
-export class TournamentGame {
+export class TicTacToe {
   public currentPlayer: string = "X";
   public winner: string;
-  public tournament: string;
-}
-
-export class TicTacToe extends TournamentGame {
   public board: string[];
 
   constructor() {
-    super();
     this.board = Array(9).fill("");
   }
 
   public play(position: number) {
-    /* checks if the position has been played before. 
-    If it has it doesnt move to the next player cos the move was illegal */
-    if (this.board[position] !== "") {
+    if (this.positionIsOccupied(position)) {
       return;
     }
-    // check if game is already won - don't need to play the move if the game is already won
-    win(this);
-    // if the winner is undefined, can continue
-    if (this.winner) {
-      // if the game is won we can just exit early
+
+    if (this.isGameOver()) {
       return;
     }
-    // Since the player is just a string, can just put that into the board
-    this.board[position] = this.currentPlayer;
-    // Calculate the winner
-    win(this);
-    // if the winner is undefined, don't need to set it
-    if (this.winner) {
-      // if the game is won we can just exit early
+
+    this.markBoard(position);   
+    
+    if (this.isGameOver()) {
       return;
     }
+
     this.swapPlayer();
   }
+
   public swapPlayer() {
     this.currentPlayer = this.currentPlayer === "X" ? "O" : "X";
+  }
+
+  private positionIsOccupied(position: number): boolean {
+    return this.board[position] !== "";
+  }
+
+  private isGameOver(): boolean {
+    this.winner = win(this);
+    return this.winner !== undefined;
+  }
+
+  private markBoard(position: number): void {
+    this.board[position] = this.currentPlayer;  
   }
 }
