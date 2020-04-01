@@ -36,7 +36,7 @@ export class TicTacToe {
   }
 
   private isGameOver(): boolean {
-    this.winner = win(this);
+    this.winner = win(this.board);
     return this.winner !== undefined;
   }
 
