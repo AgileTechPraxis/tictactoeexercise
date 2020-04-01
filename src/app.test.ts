@@ -18,9 +18,8 @@ it("should play each move on the board", () => {
 });
 
 it("should not recognise a winner on an unfinished game", () => {
-  const game = new TicTacToe();
-  win(game);
-  expect(game.winner).toBe(undefined);
+  const game = new TicTacToe(); 
+  expect(win(game)).toBe(undefined);
 });
 
 it("should recognise player X winning on the top row", () => {
