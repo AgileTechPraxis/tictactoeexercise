@@ -18,7 +18,7 @@ it("should play each move on the board", () => {
 });
 
 it("should not recognise a winner on an unfinished game", () => {
-  const board = [];
+  const board = Array(9).fill("");
   expect(win(board)).toBe(undefined);
 });
 

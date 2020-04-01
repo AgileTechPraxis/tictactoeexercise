@@ -1,68 +1,37 @@
-import { TicTacToe } from "./TicTacToe";
+class WinningCondition {
+  private positions = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [2, 4, 6],
+    [0, 4, 8]
+  ];
+
+  public getWinner (board: string[]) : string {
+    const winningPosition =  this.positions.find((position) => {
+      if (
+        board[position[0]] !== "" &&
+        board[position[0]] === board[position[1]] &&
+        board[position[1]] === board[position[2]]
+      ) {
+        return true;
+      }
+
+    })
+
+    return winningPosition && board[winningPosition[0]]; 
+  }
+}
 
 export const win = (board: string[]) => {
-  if (
-    board[0] !== "" &&
-    board[0] === board[1] &&
-    board[1] === board[2]
-  ) {
-    return board[0];
-  }
-
-  if (
-    board[3] !== "" &&
-    board[3] === board[4] &&
-    board[4] === board[5]
-  ) {
-    return board[3];
-  }
-
-  if (
-    board[6] !== "" &&
-    board[6] === board[7] &&
-    board[7] === board[8]
-  ) {
-    return board[6];
-  }
-
-  if (
-    board[0] !== "" &&
-    board[0] === board[3] &&
-    board[3] === board[6]
-  ) {
-    return board[0];
-  }
-
-  if (
-    board[1] !== "" &&
-    board[1] === board[4] &&
-    board[4] === board[7]
-  ) {
-    return board[1];
-  }
-
-  if (
-    board[2] !== "" &&
-    board[2] === board[5] &&
-    board[5] === board[8]
-  ) {
-    return board[2];
-  }
-
-  if (
-    board[2] !== "" &&
-    board[2] === board[4] &&
-    board[4] === board[6]
-  ) {
-    return board[2];
-  }
-
-  if (
-    board[0] !== "" &&
-    board[0] === board[4] &&
-    board[4] === board[8]
-  ) {
-    return board[0];
+  
+  const winningConditions = new WinningCondition();
+  const winner = winningConditions.getWinner(board);
+  if (winner) {
+    return winner;
   }
 
   if (board.filter(x => x === "").length === 0) {
