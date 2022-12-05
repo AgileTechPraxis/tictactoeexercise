@@ -1,0 +1,69 @@
+Arguments: 
+  /usr/local/share/nvm/versions/node/v16.18.1/bin/node /usr/share/yarn/bin/yarn.js
+
+PATH: 
+  /usr/local/rvm/gems/ruby-3.1.3/bin:/usr/local/rvm/gems/ruby-3.1.3@global/bin:/usr/local/rvm/rubies/ruby-3.1.3/bin:/vscode/bin/linux-x64/6261075646f055b99068d3688932416f2346dd3b/bin/remote-cli:/home/codespace/.local/bin:/home/codespace/.dotnet:/home/codespace/nvm/current/bin:/home/codespace/.php/current/bin:/home/codespace/.python/current/bin:/home/codespace/java/current/bin:/home/codespace/.ruby/current/bin:/home/codespace/.local/bin:/usr/local/oryx:/usr/local/go/bin:/go/bin:/usr/local/sdkman/bin:/usr/local/sdkman/candidates/java/current/bin:/usr/local/sdkman/candidates/gradle/current/bin:/usr/local/sdkman/candidates/maven/current/bin:/usr/local/rvm/gems/default/bin:/usr/local/rvm/gems/default@global/bin:/usr/local/rvm/rubies/default/bin:/usr/local/share/rbenv/bin:/opt/conda/bin:/usr/local/php/current/bin:/usr/local/python/current/bin:/usr/local/py-utils/bin:/usr/local/nvs:/usr/local/share/nvm/versions/node/v16.18.1/bin:/usr/local/hugo/bin:/usr/local/dotnet/current:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/codespace/.dotnet/tools:/usr/local/rvm/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.18.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /workspaces/tictactoeexercise/package.json: Unexpected token } in JSON at position 521
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:310:30)
+      at /usr/share/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "codesmells",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "jest test --watchAll=false --coverage=true",
+      "mutants": "stryker run",
+      "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+      "lint": "eslint . --color --ext .ts --ignore-pattern 'node_modules/'",
+      "lint:fix": "eslint . --ext .ts --ignore-pattern 'node_modules/' --fix",
+      "types": "type-coverage -at-least 99",
+      "types-report": "typescript-coverage-report --threshold 99",
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@types/jest": "^28.1.7",
+      "@typescript-eslint/eslint-plugin": "^5.45.0",
+      "@typescript-eslint/parser": "^5.45.0",
+      "eslint": "^8.28.0",
+      "eslint-config-prettier": "^8.5.0",
+      "eslint-plugin-import": "^2.26.0",
+      "eslint-plugin-jest": "^27.1.6",
+      "eslint-plugin-prettier": "^4.2.1",
+      "fast-check": "^3.3.0",
+      "jest": "^28.1.3",
+      "npm-run-all": "^4.1.5",
+      "prettier": "^2.8.0",
+      "ts-coverage": "^0.1.5",
+      "ts-jest": "^28.0.8",
+      "type-coverage": "^2.24.1",
+      "typescript": "^4.9.3",
+      "typescript-coverage-report": "^0.7.0"
+    },
+    "dependencies": {
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
