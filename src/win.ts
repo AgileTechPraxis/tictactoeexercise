@@ -7,11 +7,11 @@ class WinningCondition {
     [1, 4, 7],
     [2, 5, 8],
     [2, 4, 6],
-    [0, 4, 8]
+    [0, 4, 8],
   ];
 
-  public getWinner (board: string[]) : string {
-    const winningPosition =  this.positions.find((position) => {
+  public getWinner(board: string[]): string {
+    const winningPosition = this.positions.find((position) => {
       if (
         board[position[0]] !== "" &&
         board[position[0]] === board[position[1]] &&
@@ -19,22 +19,20 @@ class WinningCondition {
       ) {
         return true;
       }
+    });
 
-    })
-
-    return winningPosition && board[winningPosition[0]]; 
+    return winningPosition && board[winningPosition[0]];
   }
 }
 
 export const win = (board: string[]) => {
-  
   const winningConditions = new WinningCondition();
   const winner = winningConditions.getWinner(board);
   if (winner) {
     return winner;
   }
 
-  if (board.filter(x => x === "").length === 0) {
+  if (board.filter((x) => x === "").length === 0) {
     return "TIE";
   }
 

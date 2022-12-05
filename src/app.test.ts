@@ -1,5 +1,6 @@
 import { TicTacToe } from "./TicTacToe";
 import { win } from "./win";
+
 it("should alternate players", () => {
   const game = new TicTacToe();
   expect(game.currentPlayer).toBe("X");
@@ -18,8 +19,8 @@ it("should play each move on the board", () => {
 });
 
 it("should not recognise a winner on an unfinished game", () => {
-  const board = Array(9).fill("");
-  expect(win(board)).toBe(undefined);
+  const board = Array<string>(9).fill("");
+  expect(win(board)).toBeUndefined();
 });
 
 it("should recognise player X winning on the top row", () => {

@@ -1,12 +1,12 @@
 import { win } from "./win";
 
 export class TicTacToe {
-  public currentPlayer: string = "X";
+  public currentPlayer = "X";
   public winner: string;
   public board: string[];
 
   constructor() {
-    this.board = Array(9).fill("");
+    this.board = Array<string>(9).fill("");
   }
 
   public play(position: number) {
@@ -18,8 +18,8 @@ export class TicTacToe {
       return;
     }
 
-    this.markBoard(position);   
-    
+    this.markBoard(position);
+
     if (this.isGameOver()) {
       return;
     }
@@ -41,6 +41,6 @@ export class TicTacToe {
   }
 
   private markBoard(position: number): void {
-    this.board[position] = this.currentPlayer;  
+    this.board[position] = this.currentPlayer;
   }
 }

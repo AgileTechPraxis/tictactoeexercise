@@ -1,4 +1,5 @@
 import { TicTacToe } from "./TicTacToe";
+
 export class gameStateEvaluator {
   evaluateGameState = (board: string[]) => {
     if (this.winTopRow(board)) {
@@ -37,7 +38,7 @@ export class gameStateEvaluator {
   }
 
   private allMovesPlayed(board: string[]) {
-    return board.filter(x => x === "").length === 0;
+    return board.filter((x) => x === "").length === 0;
   }
 
   private winSecondDiagonal(board: string[]) {

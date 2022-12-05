@@ -1,0 +1,8 @@
+build/
+dist/
+lib/
+node_modules/
+.snapshots/
+*.min.js
+src_refactored/
+src_with_notes/
