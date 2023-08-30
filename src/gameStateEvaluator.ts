@@ -1,5 +1,3 @@
-import { TicTacToe } from "./TicTacToe";
-
 export class gameStateEvaluator {
   evaluateGameState = (board: string[]) => {
     if (this.winTopRow(board)) {
@@ -33,6 +31,7 @@ export class gameStateEvaluator {
     return undefined;
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   public evaluateChanceOfWinning(board: string[]) {
     /* pretend there is code here - writing a predictor is out of scope for this COP */
   }
