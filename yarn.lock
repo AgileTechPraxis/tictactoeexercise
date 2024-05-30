@@ -1404,6 +1404,14 @@ caniuse-lite@^1.0.30001400:
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001436.tgz#22d7cbdbbbb60cdc4ca1030ccd6dea9f5de4848b"
   integrity sha512-ZmWkKsnC2ifEPoWUvSAIGyOYwT+keAaaWPHiQ9DfMqS1t6tfuyFYoWR78TeZtznkEQ64+vGXH9cZrElwR2Mrxg==
 
+chalk@4.1.2, chalk@^4.0.0, chalk@^4.1.0:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
+  integrity sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
+  dependencies:
+    ansi-styles "^4.1.0"
+    supports-color "^7.1.0"
+
 chalk@^2.0.0, chalk@^2.4.1, chalk@^2.4.2:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
@@ -1412,14 +1420,6 @@ chalk@^2.0.0, chalk@^2.4.1, chalk@^2.4.2:
     ansi-styles "^3.2.1"
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
-
-chalk@^4.0.0, chalk@^4.1.0:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
-  integrity sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
-  dependencies:
-    ansi-styles "^4.1.0"
-    supports-color "^7.1.0"
 
 char-regex@^1.0.2:
   version "1.0.2"
@@ -4259,11 +4259,12 @@ type-coverage-core@^2.23.0, type-coverage-core@^2.28.1:
     tslib "1 || 2"
     tsutils "3"
 
-type-coverage@^2.28.2:
-  version "2.28.2"
-  resolved "https://registry.yarnpkg.com/type-coverage/-/type-coverage-2.28.2.tgz#de7bedc8ed745444f89e048771c5f4011dac6eb5"
-  integrity sha512-mTANnzAeuH7ldrg0fzPnhh+aCCSVAO7V7hlBoVg4XxuUtQyD3ogir/R7Z6Q7W0H1JREtDIY4I91SGHAgEPi6Bw==
+type-coverage@^2.29.0:
+  version "2.29.0"
+  resolved "https://registry.yarnpkg.com/type-coverage/-/type-coverage-2.29.0.tgz#18549f7f6ab1aea7f1b13297325369a47212594c"
+  integrity sha512-1YGnQo6kK7cq8PwPoW27EnyKsvpzM7pPPo7bcS4u/7Sb4zs0WX1rGBm1eou3ZHslu56AsmPt/pgIuhCgN1EriQ==
   dependencies:
+    chalk "4.1.2"
     minimist "1"
     type-coverage-core "^2.28.1"
 
