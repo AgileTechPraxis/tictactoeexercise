@@ -4376,10 +4376,10 @@ typed-array-length@^1.0.6:
     is-typed-array "^1.1.13"
     possible-typed-array-names "^1.0.0"
 
-typescript-coverage-report@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/typescript-coverage-report/-/typescript-coverage-report-1.1.0.tgz#9ee03507eb49a5a82f416955ac12aa0363f72f1c"
-  integrity sha512-Ap8+AuUb5DE5kB1aqODkVJLIpwOMqo+hUY6vIoUEYFlm9F1Q1LoqHutzQ5Acgnk8y1gjELcxRwCuGOU4V4aWSg==
+typescript-coverage-report@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/typescript-coverage-report/-/typescript-coverage-report-1.1.1.tgz#b61ccb496a58784d220c45c37c5c8607ac3addfb"
+  integrity sha512-tQt/wzYaQ7f2oPOVjU54DACxKXbpRx6soUWgsQZP7i+GRm5s/52YTpFj7ARiIT2oRWf3aH3ba/xf3KfURE9ukQ==
   dependencies:
     chalk "4.1.2"
     cli-table3 "^0.6.1"
