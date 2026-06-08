@@ -2029,10 +2029,10 @@ expect@^30.0.0:
     jest-mock "30.2.0"
     jest-util "30.2.0"
 
-fast-check@^4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/fast-check/-/fast-check-4.6.0.tgz#8b1238baf4e1152b4eeb9882f075463b48200e5b"
-  integrity sha512-h7H6Dm0Fy+H4ciQYFxFjXnXkzR2kr9Fb22c0UBpHnm59K2zpr2t13aPTHlltFiNT6zuxp6HMPAVVvgur4BLdpA==
+fast-check@^4.8.0:
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/fast-check/-/fast-check-4.8.0.tgz#75687d3c8059441fee4a58a8acc9be09b85aff78"
+  integrity sha512-GOJ158CUMnN6cSahsv4+ExARvIDuzzinFjkp0E9WtiBa5zcVeLozVkWaE4IzFcc+Y48Wp1EDlUZsXRyAztQcSg==
   dependencies:
     pure-rand "^8.0.0"
 
