@@ -2192,7 +2192,7 @@ fast-diff@^1.1.2:
   resolved "https://registry.npmjs.org/fast-diff/-/fast-diff-1.3.0.tgz"
   integrity sha512-VxPP4NqbUjj6MaAOafWeUn2cXWLcCtljklUtZf0Ind4XQ+QPtmA0b18zZy0jIQx+ExRVCR/ZQpBmik5lXshNsw==
 
-fast-glob@3, fast-glob@^3.2.9:
+fast-glob@^3.2.9:
   version "3.3.3"
   resolved "https://registry.npmjs.org/fast-glob/-/fast-glob-3.3.3.tgz"
   integrity sha512-7MptL8U0cqcFdzIzwOTHoilX9x5BrNqye7Z/LuC7kCMRio1EMSyqRK3BEAUD7sXRq4iT4AzTVuZdhgQ2TCvYLg==
@@ -3473,12 +3473,7 @@ minimatch@^9.0.4:
   dependencies:
     brace-expansion "^2.0.2"
 
-minimist@1, minimist@^1.2.0, minimist@^1.2.6:
-  version "1.2.7"
-  resolved "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz"
-  integrity sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==
-
-minimist@^1.2.8:
+minimist@1, minimist@^1.2.0, minimist@^1.2.6, minimist@^1.2.8:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.8.tgz#c1a464e7693302e082a075cee0c057741ac4772c"
   integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
@@ -4446,25 +4441,24 @@ type-check@^0.4.0, type-check@~0.4.0:
   dependencies:
     prelude-ls "^1.2.1"
 
-type-coverage-core@^2.30.1:
-  version "2.30.1"
-  resolved "https://registry.yarnpkg.com/type-coverage-core/-/type-coverage-core-2.30.1.tgz#caa20150f4515a8e29ced94e15c87c40b71bacfb"
-  integrity sha512-TFzqUvaZW5bTpKGBj3FwN8bYLsWA/smTOslISDg9rBMrpn5KadMQy9l3q068q+dXkn27CAdyfGTDlsH0PguG3A==
+type-coverage-core@^2.30.1, type-coverage-core@^2.30.4:
+  version "2.31.1"
+  resolved "https://registry.yarnpkg.com/type-coverage-core/-/type-coverage-core-2.31.1.tgz#37bbd56a0139b36c1023edec49362cb78c44bf1a"
+  integrity sha512-lGLbzCYafqEq/6at6aS/oJOPk9EwLIJi3IzL85uiH6clVSBDVm/lG+nIiDl0aBqR7WVK0Ld3UJE+1Gt55zphbA==
   dependencies:
-    fast-glob "3"
     minimatch "6 || 7 || 8 || 9 || 10"
     normalize-path "3"
     tslib "1 || 2"
     tsutils "3"
 
-type-coverage@^2.30.1:
-  version "2.30.1"
-  resolved "https://registry.yarnpkg.com/type-coverage/-/type-coverage-2.30.1.tgz#24c5c46d322ed58848f13a47d3dd0884c8900f97"
-  integrity sha512-+Y05UXYBaeonULHdpkc7kr0BF5Ix+IsdI/UzI2S6hnkCacTA4ktpi9EnKWMYyISW6xRaLYIEqK+4fz1GLpHQFg==
+type-coverage@^2.30.4:
+  version "2.30.4"
+  resolved "https://registry.yarnpkg.com/type-coverage/-/type-coverage-2.30.4.tgz#9ec06a1dc3177baa1e34b48a5c6313ed46cdfc31"
+  integrity sha512-tiqxpMrFjA4LEq7Mca4psE88fIVUL6oDq+HOOHxLSUqT+ynKyduaL9ZHxWgR/cqPkI0wYWlo4kYjCOOnqwT5Xw==
   dependencies:
     chalk "4.1.2"
     minimist "1"
-    type-coverage-core "^2.30.1"
+    type-coverage-core "^2.30.4"
 
 type-detect@4.0.8:
   version "4.0.8"
